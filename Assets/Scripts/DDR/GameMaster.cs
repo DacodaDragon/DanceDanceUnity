@@ -47,7 +47,7 @@ public class GameMaster : MonoBehaviour
     public void GamePlaySong(AudioClip musicClip, SongData sData)
     {
         m_musicPlayer.SetFile(musicClip,sData);
-        SceneManager.LoadScene("Scenes/GameScene");
+        SceneManager.LoadScene(1);
         SceneManager.sceneLoaded += new UnityAction<Scene,LoadSceneMode>(OnSceneLoad);
     }
 
