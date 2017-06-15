@@ -16,7 +16,7 @@ public class SongSelect : MonoBehaviour
         for (int i = 0; i < songData.Length; i++)
         {
             GameObject obj = Instantiate(ElementPrefab);
-            obj.transform.parent = gameObject.transform;
+            obj.transform.SetParent(gameObject.transform);
             obj.GetComponent<SongElement>().SetSongElement(songData[i]);
         }
     }
