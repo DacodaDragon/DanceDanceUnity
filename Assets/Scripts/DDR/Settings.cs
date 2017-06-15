@@ -5,7 +5,7 @@ using DDR;
 public class Settings : MonoBehaviour
 {
     [SerializeField] int m_Difficulty;
-    [SerializeField] DDRColorScheme m_ColorScheme;
+    [SerializeField] ColorScheme m_ColorScheme;
     [SerializeField] ControlScheme m_ControlsPlayer1;
     [SerializeField] ControlScheme m_ControlsPlayer2;
 

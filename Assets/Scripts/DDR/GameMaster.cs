@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using DDR.newloading;
 using UnityEngine.SceneManagement;
-
+using DDR;
 
 public class GameMaster : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class GameMaster : MonoBehaviour
     public SongData[] Songs { get { return m_songs; } }
 
     [SerializeField]
-    DDRSong m_musicPlayer;
+    Song m_musicPlayer;
 
     void Awake()
     {
@@ -31,7 +31,7 @@ public class GameMaster : MonoBehaviour
 
     void Start()
     {
-        m_musicPlayer = GameObject.Find("_MusicPlayer").GetComponent<DDRSong>();
+        m_musicPlayer = GameObject.Find("_MusicPlayer").GetComponent<Song>();
     }
 
     public SongData[] GetAllSongs()

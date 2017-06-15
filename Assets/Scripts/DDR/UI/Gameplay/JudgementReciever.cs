@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class JudgementReciever : MonoBehaviour
+namespace DDR
 {
-    private Text m_scoreLabel;
-    [SerializeField] private DDRPlayer m_player;
-
-    void Start()
+    public class JudgementReciever : MonoBehaviour
     {
-        m_scoreLabel = GetComponent<Text>();
-        m_player.OnJudgementChange += OnScoreChange;
-    }
+        private Text m_scoreLabel;
+        [SerializeField] private Player m_player;
 
-    private void OnScoreChange(string judgement)
-    {
-        m_scoreLabel.text = judgement;
+        void Start()
+        {
+            m_scoreLabel = GetComponent<Text>();
+            m_player.OnJudgementChange += OnScoreChange;
+        }
+
+        private void OnScoreChange(string judgement)
+        {
+            m_scoreLabel.text = judgement;
+        }
     }
 }
+
