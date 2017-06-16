@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using DDR.newloading;
-using System.Threading;
+using DDR.Audio;
 
 public class SongElement : MonoBehaviour {
 
