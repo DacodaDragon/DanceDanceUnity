@@ -74,6 +74,9 @@ namespace DDR.Audio
 
             // Cleanup
             audioStream.Dispose();
+
+            // We has loaded
+            isLoaded = true;
         }
     }
 }

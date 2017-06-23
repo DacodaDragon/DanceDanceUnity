@@ -26,7 +26,7 @@ public class GameMaster : MonoBehaviour
         }
         else DontDestroyOnLoad(this);
 
-        m_songs = SongListPreloader.LoadAll(m_songFolder);
+        m_songs = SongListPreloader.LoadAll(Application.dataPath + "/" + m_songFolder);
     }
 
     void Start()

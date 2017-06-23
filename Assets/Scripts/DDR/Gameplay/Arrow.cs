@@ -8,11 +8,22 @@ namespace DDR
     {
         public float beatStamp;
 
+        Vector3 originalRotation;
+
+        public void Awake()
+        {
+            originalRotation = transform.localRotation.eulerAngles;
+        }
+
         // Todo: Find way to make this less of a hack.
         public void SetPosition(float currentBeat, float speedMultiplier)
         {
-            float newPositionY = ((currentBeat - beatStamp) * speedMultiplier);
+            
+            float newPositionY = (((currentBeat - beatStamp) * speedMultiplier));
+
+
             transform.localPosition = new Vector3(0, newPositionY, 0);
+            transform.localRotation = Quaternion.Euler(originalRotation + new Vector3(0, newPositionY * 10, 0));
         }
     }
 }
