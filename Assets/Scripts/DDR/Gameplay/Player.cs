@@ -102,7 +102,7 @@ namespace DDR
             Row.SetSongReference(m_currentSong);
             keyEvent += Row.Hit;
 
-            Hitmarker hitMarker = Row.GetComponent<Hitmarker>();
+            Hitmarker hitMarker = Row.GetComponentInChildren<Hitmarker>();
 
             if (hitMarker)
             {
